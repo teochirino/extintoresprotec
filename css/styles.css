@@ -432,6 +432,30 @@ body {
     line-height: 1.6;
 }
 
+.whatsapp-link {
+    display: inline-block;
+    margin-left: 6px;
+    vertical-align: middle;
+    transition: transform 0.2s ease;
+    text-decoration: none;
+    line-height: 0;
+}
+
+.whatsapp-icon {
+    width: 18px;
+    height: 18px;
+    color: #25D366;
+    display: block;
+}
+
+.whatsapp-link:hover {
+    transform: scale(1.15);
+}
+
+.whatsapp-link:hover .whatsapp-icon {
+    color: #128C7E;
+}
+
 .contacto-form {
     background: var(--white);
     padding: 40px;
@@ -480,6 +504,35 @@ body {
 .btn-full {
     width: 100%;
     justify-content: center;
+}
+
+.map-container {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.map-title {
+    font-size: 1.8rem;
+    color: var(--black);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.map-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(227, 30, 36, 0.2);
+}
+
+.map-wrapper iframe {
+    display: block;
+    width: 100%;
 }
 
 /* ===================================
