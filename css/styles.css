@@ -353,6 +353,93 @@ body {
 }
 
 /* ===================================
+   Catálogo Section
+   =================================== */
+.catalogo {
+    padding: 100px 0;
+    background: var(--light-gray);
+}
+
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.catalogo-item {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.catalogo-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(227, 30, 36, 0.15);
+}
+
+.catalogo-img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.catalogo-item:hover .catalogo-img {
+    transform: scale(1.05);
+}
+
+/* ===================================
+   Modal Styles
+   =================================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: var(--white);
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 2001;
+}
+
+.modal-close:hover {
+    color: var(--primary-red);
+}
+
+/* ===================================
    Productos Section
    =================================== */
 .productos {
@@ -694,6 +781,11 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 25px;
     }
+
+    .catalogo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
 }
 
 /* Mobile */
@@ -793,6 +885,16 @@ body {
 
     .mvv-grid {
         grid-template-columns: 1fr;
+    }
+
+    .catalogo-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .catalogo-img {
+        height: auto;
+        max-height: 300px;
     }
 
     .catalogo-section {
