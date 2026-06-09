@@ -254,6 +254,105 @@ body {
 }
 
 /* ===================================
+   Quienes Somos Section
+   =================================== */
+.quienes-somos {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+}
+
+.quienes-content {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.quienes-description {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.mvv-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.mvv-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(227, 30, 36, 0.15);
+    border-color: var(--primary-red);
+}
+
+.mvv-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-red), #C41A1F);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.mvv-icon svg {
+    width: 24px;
+    height: 24px;
+    color: var(--white);
+}
+
+.mvv-card h3 {
+    font-size: 1.5rem;
+    color: var(--black);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.mvv-card p {
+    color: var(--text-light);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.valores-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.valores-list li {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    padding-left: 20px;
+    position: relative;
+}
+
+.valores-list li::before {
+    content: '•';
+    color: var(--primary-red);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.valores-list strong {
+    color: var(--black);
+}
+
+/* ===================================
    Productos Section
    =================================== */
 .productos {
@@ -590,6 +689,11 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 25px;
     }
+
+    .mvv-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
 }
 
 /* Mobile */
@@ -680,6 +784,14 @@ body {
     }
 
     .productos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quienes-somos {
+        padding: 60px 0;
+    }
+
+    .mvv-grid {
         grid-template-columns: 1fr;
     }
 
